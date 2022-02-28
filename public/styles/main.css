@@ -2,6 +2,7 @@
 
 :root {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 14px;
 }
 
 *,
@@ -28,6 +29,14 @@ main {
 	z-index: 5;
 }
 
+footer{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	background-color: #310047;
+}
+
 .container {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -41,15 +50,21 @@ main {
 	background: #3c0058;
 	border: 3px solid #fffecb;
 	color: white;
-	transition: background 400ms ease-in-out;
-	height: 5rem;
-	width: 5rem;
+	transition: all 400ms ease-in-out;
+	height: 8rem;
+	width: 8rem;
+}
+
+#freeSpace{
+	background: #f1ef64;
+	color: #272727;
 }
 
 @media screen and (max-width: 600px) {
 	.tile {
 		height: 4rem;
 		width: 4rem;
+		font-size: 10px;
 	}
 }
 
