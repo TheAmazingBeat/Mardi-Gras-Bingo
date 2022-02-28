@@ -26,7 +26,10 @@ header {
 main {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	z-index: 1;
+	height: 90vh;
 }
 
 footer {
@@ -61,14 +64,6 @@ footer {
 	color: #272727;
 }
 
-@media screen and (max-width: 600px) {
-	.tile {
-		height: 4rem;
-		width: 4rem;
-		font-size: 10px;
-	}
-}
-
 .tile:hover {
 	background: #310047;
 }
@@ -93,8 +88,6 @@ footer {
 
 .bingo-announce {
 	position: absolute;
-	top: 50;
-	left: 50;
 	z-index: 3;
 	opacity: 1;
 	background-color: #fffecb;
@@ -121,4 +114,23 @@ footer {
 #checkBtn:hover{
 	cursor: pointer;
 	background-color: greenyellow;
+}
+
+@media screen and (max-width: 600px) {
+
+	.tile {
+		height: 4rem;
+		width: 4rem;
+		font-size: 10px;
+	}
+
+	.bingo-announce{
+		width: 75%;
+		font-size: 1.25em;
+		border-radius: 5rem;
+	}
+
+	main{
+		height: 95vh;
+	}
 }
