@@ -13,13 +13,19 @@ $(document).ready(() => {
 			if (checkForBingo()) {
 				$('.bingo-modal').css('display', 'flex');
 				$('.bingo-announce').addClass('animate__animated animate__zoomInUp');
+				$('.bingo-announce').on('animationend', () => {
+					$('.bingo-announce').removeClass('animate__animated animate__zoomInUp');
+				});
 			}
 		}
 	});
 
 	$('#checkBtn').click(() => {
-		// $('.bingo-modal').addClass('animate__animated animate__zoomOutDown');
-		$('.bingo-modal').css('display', 'none');
+		$('.bingo-modal').addClass('animate__animated animate__zoomOutDown');
+		$('.bingo-modal').on('animationend', () => {
+			$('.bingo-modal').removeClass('animate__animated animate__zoomOutDown');
+			$('.bingo-modal').css('display', 'none');
+		});
 	});
 
 	renderItems();
