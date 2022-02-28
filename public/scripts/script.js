@@ -10,8 +10,14 @@ $(document).ready(() => {
 		} else {
 			$(e.currentTarget).css('background', '#f1ef64').css('color', '#272727');
 			$(e.currentTarget).attr('data-checked', 'check');
-			checkForBingo();
+			if (checkForBingo()) {
+				$('.bingo-modal').css('display', 'flex');
+			}
 		}
+	});
+
+	$('#checkBtn').click(() => {
+		$('.bingo-modal').css('display', 'none');
 	});
 
 	renderItems();
@@ -49,7 +55,6 @@ async function renderItems() {
 }
 
 function checkForBingo() {
-	let bingo = false;
 	const correctOrders = [
 		// Rows
 		[0, 1, 2, 3, 4],
@@ -92,6 +97,8 @@ function checkForBingo() {
 	indexes.sort((a, b) => a - b);
 	console.log(indexes);
 	console.log(`Compared Order: ${compareOrder()}`);
+
+	return compareOrder();
 }
 
 /**

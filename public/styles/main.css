@@ -20,21 +20,22 @@ body {
 
 header {
 	text-align: center;
-	z-index: 5;
+	z-index: 1;
 }
 
 main {
 	display: flex;
 	justify-content: center;
-	z-index: 5;
+	z-index: 1;
 }
 
-footer{
+footer {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
 	text-align: center;
 	background-color: #310047;
+	z-index: 1;
 }
 
 .container {
@@ -55,7 +56,7 @@ footer{
 	width: 8rem;
 }
 
-#freeSpace{
+#freeSpace {
 	background: #f1ef64;
 	color: #272727;
 }
@@ -70,4 +71,54 @@ footer{
 
 .tile:hover {
 	background: #310047;
+}
+
+.bingo-modal {
+	z-index: 2;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.overlay {
+	background-color: #272727;
+	opacity: 0.5;
+	width: 100%;
+	height: 100vh;
+}
+
+.bingo-announce {
+	position: absolute;
+	top: 50;
+	left: 50;
+	z-index: 3;
+	opacity: 1;
+	background-color: #fffecb;
+	width: 50%;
+	height: 45vh;
+	border-radius: 5rem;
+	text-align: center;
+	color: #272727;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+}
+
+#checkBtn{
+	border: 3px #272727 solid;
+	border-radius: 1rem;
+	background-color: green;
+	padding: 1rem;
+	transition: all 250ms ease-in-out;
+}
+
+#checkBtn:hover{
+	cursor: pointer;
+	background-color: greenyellow;
 }
