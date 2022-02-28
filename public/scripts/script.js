@@ -12,11 +12,13 @@ $(document).ready(() => {
 			$(e.currentTarget).attr('data-checked', 'check');
 			if (checkForBingo()) {
 				$('.bingo-modal').css('display', 'flex');
+				$('.bingo-announce').addClass('animate__animated animate__zoomInUp');
 			}
 		}
 	});
 
 	$('#checkBtn').click(() => {
+		// $('.bingo-modal').addClass('animate__animated animate__zoomOutDown');
 		$('.bingo-modal').css('display', 'none');
 	});
 
