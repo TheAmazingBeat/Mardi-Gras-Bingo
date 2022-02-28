@@ -23,6 +23,10 @@ header {
 	z-index: 1;
 }
 
+a{
+	color: white;
+}
+
 main {
 	display: flex;
 	justify-content: center;
@@ -66,6 +70,19 @@ footer {
 
 .tile:hover {
 	background: #310047;
+}
+
+#topLeft{
+	border-top-left-radius: 2rem;
+}
+#topRight{
+	border-top-right-radius: 2rem;
+}
+#bottomLeft{
+	border-bottom-left-radius: 2rem;
+}
+#bottomRight{
+	border-bottom-right-radius: 2rem;
 }
 
 .bingo-modal {
