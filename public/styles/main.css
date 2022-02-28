@@ -1,5 +1,7 @@
-:root{
-   font-family:Verdana, Geneva, Tahoma, sans-serif
+@import url(background.css);
+
+:root {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 *,
@@ -15,13 +17,15 @@ body {
 	color: white;
 }
 
-header{
-   text-align: center;
+header {
+	text-align: center;
+	z-index: 5;
 }
 
 main {
 	display: flex;
-   justify-content: center;
+	justify-content: center;
+	z-index: 5;
 }
 
 .container {
@@ -38,15 +42,15 @@ main {
 	border: 3px solid #fffecb;
 	color: white;
 	transition: background 400ms ease-in-out;
-   height: 5rem;
-   width: 5rem;
+	height: 5rem;
+	width: 5rem;
 }
 
 @media screen and (max-width: 600px) {
-   .tile{
-      height: 4rem;
-      width: 4rem;
-   }
+	.tile {
+		height: 4rem;
+		width: 4rem;
+	}
 }
 
 .tile:hover {
