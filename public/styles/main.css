@@ -1,0 +1,54 @@
+:root{
+   font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #272727;
+	color: white;
+}
+
+header{
+   text-align: center;
+}
+
+main {
+	display: flex;
+   justify-content: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-gap: 0.5rem;
+}
+
+.tile {
+	display: grid;
+	place-items: center;
+	background: #3c0058;
+	border: 3px solid #fffecb;
+	color: white;
+	transition: background 200ms ease-in-out;
+   height: 5rem;
+   width: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+   .tile{
+      height: 4rem;
+      width: 4rem;
+   }
+}
+
+.tile:hover {
+	background: #310047;
+}
